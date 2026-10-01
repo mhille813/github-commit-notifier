@@ -10,7 +10,7 @@ Get webhook notifications for new commits on public GitHub repositories you do n
 
 1. Download the source code and enter directory:
 ```bash
-git clone https://mhille813.github.com/github-commit-notifier
+git clone https://github.com/mhille813/github-commit-notifier.git
 cd github-commit-notifier
 ```
 
