@@ -22,7 +22,7 @@ npm install
 3. Create a .env file with content:
 ```dotenv
 # .env
-REPO="{owner}/{repo}"           # Required
+REPO="{owner}/{repo}"       # Required
 WEBHOOK_URL_LIST=["..."]    # Required
 PERSONAL_ACCESS_TOKEN="..." # Optional
 ```
