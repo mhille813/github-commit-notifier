@@ -44,9 +44,9 @@ node app.js
 
 This program works by periodically checking the [commits REST API](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10) with the [`since`](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10#:~:text=since) query parameter. Every time the API is called, the program updates the `since` variable for the next time it calls the API, this way only new commits are returned. If there are new commits, the program loops over them and uses the following data to format the webhook embed messages:
 
-- commitData.committer.login
-- commitData.committer.html_url
-- commitData.committer.avatar_url
+- (if available): commitData.author.login
+- (if available): commitData.author.html_url
+- (if available): commitData.author.avatar_url
 - commitData.commit.message
 - commitData.html_url
 - commitData.sha
