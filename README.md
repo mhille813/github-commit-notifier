@@ -42,7 +42,7 @@ node app.js
 
 ## How it works
 
-This program works by periodically checking the [commits REST API](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10) with the [`since`](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10#:~:text=since) query parameter. Every time the API is called, the program updates the `since` variable for the next time it calls the API, this way only new commits are returned. If there are new commits, the program loops over them and uses the following data to format the webhook embed messages:
+This program works by periodically checking the [commits REST API](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10) with the [`since`](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10#:~:text=since) and [`until`](https://docs.github.com/en/rest/commits/commits?apiVersion=2026-03-10#:~:text=until) query parameters. Every time the API is called, the program updates these variables for the next time it calls the API, this way only new commits are returned. If there are new commits, the program loops over them and uses the following data to format the webhook embed messages:
 
 - (if available): commitData.author.login
 - (if available): commitData.author.html_url
